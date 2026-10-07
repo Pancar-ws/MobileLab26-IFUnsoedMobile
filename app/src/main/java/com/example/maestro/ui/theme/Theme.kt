@@ -1,7 +1,5 @@
 package com.example.maestro.ui.theme
 
-import android.R
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -14,45 +12,44 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Primary,
-    onPrimary = Color.White,
-    secondary = Secondary,
-    onSecondary = Color.White,
-    tertiary = PrimaryVariant,
+    primary = BmkgSecondary,
+    onPrimary = Color.Black,
+    primaryContainer = BmkgPrimary,
+    onPrimaryContainer = Color.White,
+    secondary = BmkgSecondary,
+    onSecondary = Color.Black,
+    tertiary = BmkgTertiary,
     onTertiary = Color.White,
-    background = Color(0xFF121212),
-    surface = Color(0xFF1E1E1E),
-    onBackground = Color.White,
-    onSurface = Color.White,
-    surfaceVariant = Color(0xFF2D2D2D),
-    onSurfaceVariant = Color(0xFFE0E0E0)
+    background = BmkgDarkBg,
+    onBackground = BmkgDarkTextPrimary,
+    surface = BmkgDarkSurface,
+    onSurface = BmkgDarkTextPrimary,
+    surfaceVariant = BmkgDarkCard,
+    onSurfaceVariant = BmkgDarkTextSecondary,
+    outline = BmkgDarkBorder
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Primary,
+    primary = BmkgPrimary,
     onPrimary = Color.White,
-    secondary = Secondary,
+    primaryContainer = Color(0xFFE0EDF8),
+    onPrimaryContainer = BmkgPrimary,
+    secondary = BmkgSecondary,
     onSecondary = Color.White,
-    tertiary = PrimaryVariant,
+    tertiary = BmkgTertiary,
     onTertiary = Color.White,
-    background = Background,
-    surface = Surface,
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    background = BmkgLightBg,
+    onBackground = BmkgLightTextPrimary,
+    surface = BmkgLightSurface,
+    onSurface = BmkgLightTextPrimary,
+    surfaceVariant = Color(0xFFF1F5F9),
+    onSurfaceVariant = BmkgLightTextSecondary,
+    outline = BmkgLightBorder
 )
 
 @Composable
 fun MaestroTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
@@ -61,7 +58,6 @@ fun MaestroTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }

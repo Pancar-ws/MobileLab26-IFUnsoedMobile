@@ -6,7 +6,15 @@ Proyek ini dikembangkan untuk memenuhi penugasan **Responsi Praktikum Pemrograma
 
 ---
 
+## 🔗 Informasi Pengumpulan & Tautan Penting
+
+- **🌿 Branch Penugasan**: [`feat/responsi-gempa-bmkg`](https://github.com/Pancar-ws/MobileLab26-IFUnsoedMobile/tree/feat/responsi-gempa-bmkg)
+- **🎥 Video Penjelasan Kode (YouTube)**: [https://youtu.be/vEdlnOR7JQ0](https://youtu.be/vEdlnOR7JQ0)
+
+---
+
 ## 📱 Screenshots Tampilan Aplikasi
+
 
 | Home Screen (Katalog & Pencarian) | Detail Screen (Parameter Lengkap) |
 | :---: | :---: |
